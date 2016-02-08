@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SavingDataExample</string>
+    <string name="str_inputname">What is your name ?</string>
+    <string name="str_inputname_hint">Input the your name</string>
+    <string name="str_resultname">Your name is <font color="red">%s</font></string>
+    <string name="str_inputname_err">Please, input the name</string>
+</resources>
