@@ -8,7 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends FragmentActivity {
+    // for save data on local
     private SharedPreferences pref= null;
+
     private FragmentTransaction mFrgTransaction= null;
     private MainFragment mMain= null;
 
@@ -47,12 +49,14 @@ public class MainActivity extends FragmentActivity {
     public void setName(String name){ mName= name; }
     public String getName(){ return mName; }
 
+    // save data on local
     private void saveSharedPreference(){
         if(pref == null) pref= getSharedPreferences("myapplication", Context.MODE_PRIVATE);
         SharedPreferences.Editor edit= pref.edit();
         if(mName != null) edit.putString("name", mName);
         edit.commit();
     }
+    // load data on local
     private void loadSharedPreference(){
         pref= getSharedPreferences("myapplication", Context.MODE_PRIVATE);
         mName= pref.getString("name", null);
